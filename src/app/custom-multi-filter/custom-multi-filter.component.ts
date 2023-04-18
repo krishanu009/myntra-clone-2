@@ -52,15 +52,18 @@ export class CustomMultiFilterComponent implements OnInit {
     {
           this.filterOptions.push(new CustomFilterObject(this.filters[i],false));
     }
-    console.log(this.receivedSelectedValues);
+    //console.log(this.receivedSelectedValues);
     this.receivedSelectedValues.forEach( (item) => {
       let index=-1;
        index = this.filterOptions.findIndex(element => element.option === item.value);
-      //  console.log(item.value);
-      if(index!=-1)
+       console.log(index);
+      if(index!==-1)
       {
-        this.checkValue(index);
+        this.filterOptions[index].selected = true;
+        // console.log(index);
+        // this.checkValue(index);
       }
+      
     }
 
     );

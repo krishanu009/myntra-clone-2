@@ -24,6 +24,7 @@ export class ProductComponent implements OnInit {
 @Input() selectedGenderValueChnage: any;
 
   ngOnInit(): void {
+    console.log(this.selectedValues);
     this.products = this.dataService.populateData('men','',this.selectedValues);
     this.categories = this.dataService.populateFilters('men','categories');
     this.brand = this.dataService.populateFilters('men','brand');
