@@ -1,0 +1,177 @@
+
+.top-panel-content
+{
+    padding-left: 50px;
+    
+    
+}
+.top-panel{
+    margin: 30px 20px 30px;
+}
+/* .middle-left-panel
+{
+    border:0.1px solid;
+    border-color: rgb(209, 210, 212);
+    margin-left: -13px;
+    padding-left: 30px;
+    margin-top: -5px;
+    background-color: white;
+    width: 270px;
+} */
+.container
+{
+    margin: 0%;
+}
+
+/* filter css */
+.panel {
+    display: block;
+    width: 230px;
+    
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+   padding: 10px;
+   padding-left: 30px;
+    height: auto;
+    border-bottom: 0.1px solid;
+    border-right: 0.1px solid;
+    border-color: rgb(209, 210, 212);
+    min-height: 130px;
+    
+}
+
+.multi-panel {
+    display: block;
+    width: 230px;
+    
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    padding: 10px;
+    padding-bottom: 30px;
+    /* padding-left: 30px; */
+    /* margin-left: 20px; */
+    height: auto;
+    border-bottom: 0.1px solid;
+    border-right: 0.1px solid;
+    border-color: rgb(209, 210, 212);
+    min-height: 250px;
+    
+}
+.middle-multi-panel
+{
+    margin-top: 30px;
+    
+}
+
+.search-icon
+{
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 150px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 50%;
+    padding: 5px;
+    color: #5f5e5e;
+    font-size: small;
+    border-color: rgb(233, 233, 233);
+}
+.search-input
+{
+    margin-top: 8px;
+    background-color: rgb(233, 233, 233);
+    height: 25px;
+    width: 176px;
+    border: 0px solid;
+    border-radius: 25px;   
+    padding: 10px; 
+    
+}
+/* .header-text
+{
+    margin-top: -8px;
+} */
+.search-input:focus
+{
+    outline: none;
+}
+
+
+.header-text
+{
+    font-weight: bold;
+}
+
+:host ::ng-deep .p-radiobutton .p-radiobutton-box {
+    border: 2px solid #ced4da;
+    background: #ffffff;
+    width: 14px;
+    height: 14px;
+    color: #544957;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+:host ::ng-deep .p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: #ffffff;
+    background: #e81462;
+}
+
+
+:host ::ng-deep .p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
+    width: 12px;
+    height: 12px;
+    transition-duration: 0.2s;
+    background-color: #e81462;
+  
+}
+
+
+:host ::ng-deep .p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: #ffffff;
+    background: #e81462;
+   
+}
+:host ::ng-deep .p-radiobutton-box .p-highlight {
+    border-color: #ffffff;
+    background: #e81462;
+   
+}
+/* :host ::ng-deep  .p-checkbox {
+   
+    width: 15px;
+    height: 1px;
+} */
+
+:host ::ng-deep .p-checkbox .p-checkbox-box  {
+    transition-duration: 0.2s;
+    color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 10%;
+   
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box .p-checkbox-icon {
+    transition-duration: 0.2s;
+    color: #ffffff;
+    font-size: 7px;
+}
+/* :host ::ng-deep .p-checkbox-icon {
+    transition-duration: 0.2s;
+    color: #ffffff;
+    width: 5px;
+    height: 5px;
+    border-radius: 10%;
+   
+} */
+
+:host ::ng-deep  .p-checkbox .p-checkbox-box.p-highlight {
+    border-color:  #e81462;
+    background:  #e81462;
+}
+.product-view
+{
+    width: 300px;
+}

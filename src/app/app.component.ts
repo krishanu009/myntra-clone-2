@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myntra-clone-2';
+
+  Gender: string = 'Men';
+  selectedValues: any[]=[{type:'CATEGORIES',value:'Casual shirts'}];
 }

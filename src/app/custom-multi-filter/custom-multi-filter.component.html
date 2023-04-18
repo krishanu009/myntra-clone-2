@@ -1,0 +1,31 @@
+<div class="filter-panel">
+    <div class="container">
+     <div class="row">
+         <div class="col-10 title-search">
+             <p class="filter-title" *ngIf="!searchBar"><strong>{{title}}</strong></p>
+             <input [(ngModel)]="searchInput" class="search-input" *ngIf="searchBar" type="text" id="fname" name="fname" placeholder="Search for {{title}} ">
+         </div>
+         <div class="col-2">
+            <svg (click)="Search()" *ngIf="!searchBar"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+              <svg  *ngIf="searchBar" (click)="Search()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+              </svg>
+             <!-- <i *ngIf="!searchBar" class="bi bi-search" (click)="Search()"></i>
+             <i *ngIf="searchBar" class="bi bi-search" (click)="Search()"></i> -->
+             
+         </div>
+         
+         
+        
+     </div>
+     <div class="row">
+         <div class="form-check" *ngFor="let item of filterOptions | filter:searchInput; let i = index" [attr.data-index]="i">
+             <input #checkboxes [(ngModel)]="item.selected" class="form-check-input" type="checkbox" value="{{item.option}}" id="flexCheckDefault" (change)="checkValue(i)">
+             <label class="form-check-label" for="flexCheckDefault">
+                 {{item.option}}
+             </label>
+           </div>
+     </div>
+    </div>

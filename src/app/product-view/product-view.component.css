@@ -1,0 +1,85 @@
+.main-card
+{
+    height:370px;
+}
+
+
+img{
+    width:250px;
+    
+  height: 260px;
+  object-fit: cover;
+    
+}
+
+
+   
+
+        .hover-div {
+            opacity: 1;
+            width: 251px;
+            height: 84px;
+            position: relative;
+            bottom: 4px;
+        }
+            
+       
+        
+        .wishlist{
+            opacity: 0;
+            font-size: small;
+        }
+        .product-info
+        {
+            margin-bottom: 7px;
+            position: absolute;
+            bottom: 5px;
+
+        }
+        .hover-div:hover {
+           
+            opacity: 1;
+            height: 138px;
+            bottom: 57px;
+            /* bottom: 20px; */
+             /* adds a delay before the transition starts */
+        }
+        .hover-div:hover .wishlist{
+            opacity: 1;
+            
+            /* bottom: 20px; */
+             /* adds a delay before the transition starts */
+        }
+        .hover-div:hover .product-info{
+            top:11px;
+            position: relative;
+            
+            /* bottom: 20px; */
+             /* adds a delay before the transition starts */
+        }
+
+        .base_div
+        {
+            position: relative; 
+            /* bottom:16px; */
+            width: 251px;
+            height: 100px;
+            
+            
+        }
+        .product-name
+        {
+            color: grey;
+            /* margin-top: 1px; */
+            font-size: small;
+            margin-bottom: 0px;
+        }
+        .brand-name
+        {
+               margin-bottom: 1px;
+        }
+        .price
+        {
+            margin-bottom: 1px;
+            font-size: small;
+        }

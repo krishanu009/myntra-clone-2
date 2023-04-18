@@ -1,0 +1,86 @@
+<!-- <app-header-menu></app-header-menu> -->
+
+<!-- <div class="top-panel">
+    <div class="top-panel-content">
+        <p>Homne/Footwear</p>
+        <p><strong>Footwear</strong> - 500 items</p>
+        <Strong>FILTERS</Strong>
+    </div>
+    
+</div> -->
+<!-- <div class="middle-left-panel">
+    <div class="filter">
+        <app-filters [filterConfig]="genderFilterConfig" [filterCat]="genders"></app-filters>
+        
+        <app-filters [filterConfig]="categoryFilterConfig" [filterCat]="categories"></app-filters>
+      
+        <app-filters [filterConfig]="brandFilterConfig" [filterCat]="brand"></app-filters>
+       
+        <app-filters [filterConfig]="priceFilterConfig" [filterCat]="price"></app-filters>
+        
+    </div>
+</div> -->
+<!-- <div class="middle-right-panel"></div> -->
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="top-panel">
+            <div class="top-panel-content2">
+                <p>Homne/Footwear</p>
+                <p><strong>{{productCategory}}</strong> - {{productCount}} items</p>
+                <Strong>FILTERS</Strong>
+            </div>
+            
+        </div>
+
+    </div>
+   
+    <div class="row">
+        <div class="col-2">
+            <!-- <div class="filter2">
+                <app-filters [filterConfig]="genderFilterConfig" [filterCat]="genders" (filterValueEmmiter)="filterValuesEmitted($event)"></app-filters>
+                
+                <app-filters [filterConfig]="categoryFilterConfig" [filterCat]="categories" (filterValueEmmiter)="filterValuesEmitted($event)"></app-filters>
+              
+                <app-filters [filterConfig]="brandFilterConfig" [filterCat]="brand" (filterValueEmmiter)="filterValuesEmitted($event)"></app-filters>
+               
+                <app-filters [filterConfig]="priceFilterConfig" [filterCat]="price" (filterValueEmmiter)="filterValuesEmitted($event)"></app-filters>
+                
+            </div> -->
+            
+            
+            <!-- <div class="filter2">
+                <app-custom-radio [defaultSelect]="selectedGenderValue" [filters]="genders" (genderSelection)="genderSelection($event)"></app-custom-radio>
+                <app-custom-multi-filter [filters]="categories" [title]="filterTitles[0]" (selectionChange)="selectionChange($event)"></app-custom-multi-filter>
+                <app-custom-multi-filter [filters]="brand" [title]="filterTitles[1]" (selectionChange)="selectionChange($event)"></app-custom-multi-filter>
+                <app-custom-multi-filter [filters]="price" [title]="filterTitles[2]" (selectionChange)="selectionChange($event)"></app-custom-multi-filter>
+                
+            </div> -->
+
+            <div class="filter2">
+                <app-custom-radio [defaultSelect]="selectedGenderValueChnage" [filters]="genders" (genderSelection)="genderSelection($event)"></app-custom-radio>
+                <app-custom-multi-filter [filters]="categories" [title]="filterTitles[0]" [receivedSelectedValues]="selectedValues" (selectionChange)="selectionChange($event)" ></app-custom-multi-filter>
+                <app-custom-multi-filter [filters]="brand" [title]="filterTitles[1]" [receivedSelectedValues]="selectedValues" (selectionChange)="selectionChange($event)"></app-custom-multi-filter>
+                <app-custom-multi-filter [filters]="price" [title]="filterTitles[2]" [receivedSelectedValues]="selectedValues" (selectionChange)="selectionChange($event)"></app-custom-multi-filter>
+                
+            </div>
+
+          </div>
+          <div class="col-10">
+            <div class="row" style="margin-bottom: 15px;">
+                <app-chips [values]="selectedValues" (chipEmitter)="chipCloseEmitted($event)"></app-chips>
+            </div>
+            <div class="row" >
+                <div class="product-view" *ngFor="let i of products" style="display: inline-block;">
+                    <app-product-view [product]="i" ></app-product-view>
+                </div>
+                
+            </div>
+          </div>
+
+
+    </div>
+
+  </div>

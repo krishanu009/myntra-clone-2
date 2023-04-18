@@ -1,0 +1,14 @@
+.filter-panel
+{
+
+    width: 235px;
+    padding: 20px 10px 10px;
+    height: auto;
+    border-top:  0.1px solid; 
+    border-bottom: 0.1px solid;
+    border-right: 0.1px solid;
+    border-color: rgb(209, 210, 212);
+    min-height: 150px;
+    font: 1em sans-serif;
+    font-size: small;
+}

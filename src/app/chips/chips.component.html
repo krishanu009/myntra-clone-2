@@ -1,0 +1,7 @@
+
+<div class="chip" *ngFor="let item of values; let i = index" [attr.data-index]="i">
+    {{item.value}}
+<span class="closebtn" (click)="Close(i)">&times;</span>
+</div>
+
+

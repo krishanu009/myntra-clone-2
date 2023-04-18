@@ -1,0 +1,169 @@
+:host ::ng-deep  .p-tabMenu{
+    
+    background: white;
+    margin-left: 500px;
+}
+
+:host ::ng-deep  .p-menuitem-text{
+    
+    color: #504e4e;
+}
+:host ::ng-deep .p-tabmenu .p-tabmenu-nav {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-width: 0 0 2px 0;
+    margin-left: 110px;
+    margin-top: -10px;
+    height: 70px;
+    
+}
+
+:host ::ng-deep .custom-icon {
+        width: 1rem;
+        height: 1rem;
+        background-image: url("../../assets/myntra.svg");
+    }
+
+.logo
+{
+    position: absolute;
+    width: 100px;
+    /* margin-top: -8px; */
+}
+
+:host ::ng-deep .p-inputtext {
+    
+    /* display: inline-block; */
+    
+    
+    width: 400px;
+
+}
+
+:host ::ng-deep  .p-input-icon-left{
+    position: absolute;
+    
+    
+    margin-left: 800px;
+    margin-top: -50px;
+}
+
+.menu-icons
+{
+    position: absolute;
+    margin-left: 1300px;
+    /* margin-top: 300px; */
+    margin-top: -55px;
+    margin-right: 50px;
+    
+}
+
+.icon-text
+{
+    position: relative;
+    margin-top: 20px;
+    margin-left: -10px;
+    align-items: center;
+    
+}
+
+.icon-text-bag
+{
+    position: relative;
+    margin-top: 20px;
+    margin-left: -5px;
+    align-items: center;
+    
+}
+
+.icon-text-heart
+{
+    position: relative;
+    margin-top: 20px;
+    margin-left: -12px;
+    align-items: center;
+    
+}
+    
+.user-icon
+{
+ position: absolute;
+ 
+}
+.heart-icon
+{
+ position: absolute;
+ margin-left: 70px;
+}
+  
+.bag-icon
+{
+ position: absolute;
+ margin-left: 130px;
+}
+
+.header
+{
+    z-index: 9;
+    position:fixed;
+    background-color: white;
+    margin-top: -100px;
+    box-shadow:4px
+}
+
+.middle-content-corosoul
+{
+    position:relative;
+    margin-top: 100px;
+}
+
+.middle-content-deals
+{
+    position:relative;
+    margin-top: 100px;
+    
+}
+.header-text
+{
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #564343;
+    margin-left: 50px;
+}
+  
+:host ::ng-deep .p-card .p-card-body {
+    padding: 1.25rem;
+    width: 1517px;
+    height: 100px;
+    margin-top: -16px;
+}
+.row-all{
+    margin-top: 60px;
+}
+
+.row-img
+{
+    margin-top: 30px;
+    width: 187px;
+}
+.row-img2
+{
+    margin-top: 30px;
+    width: 182px;
+    padding-left: 5px;
+}
+.row-img3
+{
+    margin-top: 30px;
+    width: 213px;
+    /* padding-left: 2px; */
+}
+.row-img4
+{
+    margin-top: -1;
+    width: 213px;
+    /* padding-left: 2px; */
+}
+/* :host ::ng-deep .p-carousel {
+    position: relative;
+    margin-top: 100px;
+} */
