@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { FilterPipe } from './filter.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FilterPipe } from './filter.pipe';
     HomeComponent,
     ProductComponent,
     ProductViewComponent,
-    FilterPipe
+    FilterPipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,119 @@
+.main
+{
+    height:83px;
+}
+.logo
+{
+    width: 121px;
+}
+
+.items
+{
+    margin-top: 14px;
+    /* margin-left: 16px; */
+    font-size: small;
+    /* font-weight: bold; */
+    display: inline-block;
+    color: rgb(71, 69, 72);
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    width: 95px;
+}
+.items-2
+{
+    
+    
+    width: 150px;
+}
+.base-block
+{
+    opacity: 0;
+    width: 100%;
+    height: 4px;
+    margin-top: 30px;
+    
+}
+.fitst-base
+{
+    background-color: rgb(164, 53, 53);
+}
+.second-base
+{
+    background-color: rgb(225, 96, 197);
+}
+.third-base
+{
+    background-color: rgb(200, 85, 3);
+}
+.fourth-base
+{
+    background-color: rgb(232, 139, 9);
+}
+.fifth-base
+{
+    background-color: rgb(50, 104, 50);
+}
+.sixth-base
+{
+    background-color: rgb(130, 20, 20);
+}
+
+.items:hover .base-block
+{
+    opacity: 1;
+    
+}
+
+.logo-div
+{
+    width: 180px;
+}
+
+.search-input
+{
+    
+    background-color: rgb(249, 246, 246);
+    border: none;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    width: 362px;
+}
+.search-icon
+{
+    
+    
+    margin-left: 10px;
+    width: 26px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+.search-body
+{
+    margin-top: 9px;
+    /* border: 5px solid red; */
+    height: 38px;
+    width: 418px;
+    background-color: rgb(249, 246, 246) ;
+    
+   
+}
+
+.icons
+{
+    margin-top: 10px;
+    margin-left: 15px;
+    display: inline-block;
+    
+}
+.icon-tag
+{
+    font-size: small;
+    font-weight: bold;
+}
+
+/* .item-text
+{
+    margin-left: 10x;
+} */
