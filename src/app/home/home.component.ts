@@ -11,6 +11,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  images = ['assets/slider1.webp',
+            'assets/slider2.webp',
+            'assets/slider3.webp',
+            'assets/slider4.webp',
+            'assets/slider5.webp',
+            'assets/slider6.webp']
   row1: any[] = ['assets/rows/row1-1.webp',
                      'assets/rows/row1-2.jpg',
                      'assets/rows/row1-3.webp',

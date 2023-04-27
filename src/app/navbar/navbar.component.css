@@ -1,6 +1,10 @@
 .main
 {
-    height:83px;
+    height: 83px;
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 2;
+    /* margin-top: -100px; */
 }
 .logo
 {
@@ -18,6 +22,7 @@
     font-family: Verdana, sans-serif;
     text-align: center;
     width: 95px;
+    height: 100px;
 }
 .items-2
 {
@@ -31,11 +36,12 @@
     width: 100%;
     height: 4px;
     margin-top: 30px;
+    display: none;
     
 }
 .fitst-base
 {
-    background-color: rgb(164, 53, 53);
+    background-color: rgb(204, 70, 70);
 }
 .second-base
 {
@@ -61,8 +67,139 @@
 .items:hover .base-block
 {
     opacity: 1;
+    display: block;
     
 }
+.items:hover .menu-1 
+{
+    
+    opacity: 1;
+    display: block;
+    
+}
+
+.menu-1
+{
+    display: none;
+    width: 1522px;
+    margin-left: -143px;
+    height: 1005px;
+    background: rgba(0, 0, 0, 0.329);
+    
+
+    
+}
+.shadowDiv
+{
+   
+    width: 100%;
+    
+    height: 1005px;
+    background: rgba(0, 0, 0, 0.329);
+    position: fixed;
+    z-index: 1;
+    
+}
+.content-1
+{
+    transition: 0.5s;
+    /* width: 1100px; */
+    width: 580px;
+    height: 500px;
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    margin-top: 82px;
+    margin-left: 128px;
+    /* left: 120px;  */
+}
+
+.content-2
+{
+    transition: 0.5s;
+
+    width: 580px;
+    height: 500px;
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    margin-top: 82px;
+    margin-left: 225px;
+}
+.content-3
+{
+    transition: 0.5s;
+
+    width: 580px;
+    height: 500px;
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    margin-top: 82px;
+    margin-left: 321px;
+}
+.cat-menu
+{
+    width: 173px;
+    
+    margin-left: 20px;
+}
+a{
+    font-size: 12px;
+    color: rgb(43, 42, 42);
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 18px;
+    
+}
+a:hover{
+    font-size: 12px;
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    /* font-size: 14px; */
+    font-weight: bold;
+    margin-top: 5px;
+   
+}
+.h1-men
+{
+    font-size: small;
+    font-weight: bold;
+    color: rgb(204, 70, 70);
+    /* color: rgb(252, 81, 206); */
+    /* display: block; */
+    margin-top: 28px;
+    text-align: left;
+    margin-left: 11px;
+    
+}
+.h1-women
+{
+    font-size: small;
+    font-weight: bold;
+    
+    color: rgb(252, 81, 206);
+    /* display: block; */
+    margin-top: 28px;
+    text-align: left;
+    margin-left: 11px;
+    
+}
+.h1-kids
+{
+    font-size: small;
+    font-weight: bold;
+    
+    color: rgb(200, 85, 3);
+    /* display: block; */
+    margin-top: 28px;
+    text-align: left;
+    margin-left: 11px;
+    
+}
+
 
 .logo-div
 {

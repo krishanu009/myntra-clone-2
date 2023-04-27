@@ -5,28 +5,84 @@
         </div>
         <div class="col-5">
             <div class="row">
-                <div class="col-1 items">
+                <div class="col-1 items" (mouseover)="hoverItem($event)" (mouseleave)="itemOut()" id="menu0">
                     <div class="item-text"><strong class='item-text'>MEN</strong></div>
 
                     <div class="base-block fitst-base"></div>
+                    
+                   
                 </div>
-                <div class="col-1 items">
+                <div class="col-1 items" (mouseover)="hoverItem($event)" (mouseleave)="itemOut()" id="menu1">
                     <div class="item-text"><strong class='item-text'>WOMEN</strong></div>
                     <div class="base-block second-base"></div>
+                    <div class="menu-2">
+
+                        <!-- <div class="content">
+                            <div class="row">
+                                <div class="cat-menu">
+                                    <h1 class="h1-women">Topwear</h1>
+                                    <a href="">T Shirts</a>
+                                    
+                                    <a href="">Casual Shirts</a>
+                                    
+                                    <a href="">Formal Shirts</a>
+                                    
+                                    <a href="">Sweatshirts</a>
+                                    
+                                    <a href="">Sweaters</a>
+                                    
+                                    <a href="">Jackets</a>
+                                    
+                                    <a href="">Suits</a>
+                                    
+                                </div>
+                                <div class="cat-menu">
+                                    <h1 class="h1-men">Bottomwear</h1>
+                                    <a href="">Jeans</a>
+                                    
+                                    <a href="">Casual Trousers</a>
+                                    
+                                    <a href="">Formal Trousers</a>
+                                    
+                                    <a href="">Shorts</a>
+                                    
+                                    <a href="">Track Pants & Joggers</a>
+                                    
+                                    
+                                </div>
+
+                                <div class="cat-menu">
+                                    <h1 class="h1-men">Footwear</h1>
+                                    <a href="">Casual Shoes</a>
+                                    
+                                    <a href="">Sports Shoes</a>
+                                    
+                                    <a href="">Sandals</a>
+                                    
+                                    <a href="">Flip Flops</a>
+                                    
+                                    <a href="">Socks</a>
+                                    
+                                    
+                                </div>
+                            </div>
+
+                        </div> -->
+                    </div>
                 </div>
-                <div class="col-1 items">
-                    <div class="item-text"><strong class='item-text'>KIDS</strong></div>
+                <div class="col-1 items" (mouseover)="hoverItem($event)" (mouseleave)="itemOut()" id="menu2">
+                    <div class="item-text"><strong class='item-text'> KIDS </strong></div>
                     <div class="base-block third-base"></div>
                 </div>
-                <div class="col-2 items items-2">
+                <div class="col-2 items items-2" (mouseover)="hoverItem($event)" (mouseout)="itemOut()" id="menu3">
                     <div class="item-text"><strong class='item-text'>HOME & LIVING</strong></div>
                     <div class="base-block fourth-base"></div>
                 </div>
-                <div class="col-1 items">
+                <div class="col-1 items" (mouseover)="hoverItem($event)" (mouseout)="itemOut()" id="menu4">
                     <div class="item-text"><strong class='item-text'>BEAUTY</strong></div>
                     <div class="base-block fifth-base"></div>
                 </div>
-                <div class="col-1 items">
+                <div class="col-1 items" (mouseover)="hoverItem($event)" (mouseout)="itemOut()" id="menu5">
                     <div class="item-text"><strong class='item-text'>STUDIO</strong></div>
                     <div class="base-block sixth-base"></div>
                 </div>
@@ -76,4 +132,190 @@
             </div>
         </div>
     </div>
+</div>
+<div class="shadowDiv" [style.display]="shadowDiv">
+                        
+</div>
+
+
+<!-- first menu -->
+
+<div class="content-1" [style.display]="hover[0]===true || content[0] === true ? 'block' : 'none'" (mouseenter)="contentHover('0')" (mouseleave)="contentOut('0')" >
+    <div class="row">
+        <div class="cat-menu" >
+            <h1 class="h1-men">Topwear</h1>
+            <a routerLink="/product/men">T Shirts</a>
+            
+            <a routerLink="/product/men">Casual Shirts</a>
+            
+            <a routerLink="/product/men">Formal Shirts</a>
+            
+            <a routerLink="/product/men">Sweatshirts</a>
+            
+            <a routerLink="/product/men">Sweaters</a>
+            
+            <a routerLink="/product/men">Jackets</a>
+            
+            <a routerLink="/product/men">Suits</a>
+            
+        </div>
+        <div class="cat-menu">
+            <h1 class="h1-men">Bottomwear</h1>
+            <a href="">Jeans</a>
+            
+            <a href="">Casual Trousers</a>
+            
+            <a href="">Formal Trousers</a>
+            
+            <a href="">Shorts</a>
+            
+            <a href="">Track Pants & Joggers</a>
+            
+            
+        </div>
+
+        <div class="cat-menu">
+            <h1 class="h1-men">Footwear</h1>
+            <a href="">Casual Shoes</a>
+            
+            <a href="">Sports Shoes</a>
+            
+            <a href="">Sandals</a>
+            
+            <a href="">Flip Flops</a>
+            
+            <a href="">Socks</a>
+            
+            
+        </div>
+    </div>
+
+</div>
+
+<!-- second-menu -->
+
+<div class="content-2" [style.display]="hover[1]===true || content[1] === true ? 'block' : 'none'"  (mouseenter)="contentHover('1')" (mouseleave)="contentOut('1')" >
+    <div class="row">
+        <div class="cat-menu" >
+            <h1 class="h1-women">Indian & Fusion Wear</h1>
+
+            <a href="">Kurtas & Suits</a>  
+            
+            <a href="">Sarees</a>
+            
+            <a href="">Ethnic Wear</a>
+            
+            <a href="">Leggings</a>
+            
+            <a href="">Salwars & Churidars</a>
+            
+            <a href="">Jackets</a>
+            
+        </div>
+
+        
+   
+        <div class="cat-menu">
+            <h1 class="h1-women">Western Wear</h1>   
+            <a href=""> Dresses</a>
+            
+            <a href="">Tops</a>
+            
+            <a href="">Tshirts</a>
+            
+            <a href="">Jeans</a>
+            
+            <a href="">Sweaters & Sweatshirts</a>
+
+            <a href="">Shorts & Skirts</a>
+
+            <a href="">Jackets & Coats</a>
+            
+            
+        </div>
+        
+        
+        
+        
+        
+        <div class="cat-menu">
+            <h1 class="h1-women">Footwear</h1>
+            <a href="">Flats</a>
+            
+            <a href="">Casual Shoes</a>
+            
+            <a href="">Sandals</a>
+            
+            <a href="">Boots</a>
+            
+            <a href="">Sports Shoes & Floaters</a>
+            
+            
+        </div>
+    </div>
+
+</div>
+
+<!-- third-menu -->
+
+<div class="content-3" [style.display]="hover[2]===true || content[2] === true ? 'block' : 'none'"  (mouseenter)="contentHover('2')" (mouseleave)="contentOut('2')" >
+    <div class="row">
+        <div class="cat-menu" >
+            <h1 class="h1-kids">Indian & Fusion Wear</h1>
+
+            <a href="">Kurtas & Suits</a>  
+            
+            <a href="">Sarees</a>
+            
+            <a href="">Ethnic Wear</a>
+            
+            <a href="">Leggings</a>
+            
+            <a href="">Salwars & Churidars</a>
+            
+            <a href="">Jackets</a>
+            
+        </div>
+
+        
+   
+        <div class="cat-menu">
+            <h1 class="h1-kids">Western Wear</h1>   
+            <a href=""> Dresses</a>
+            
+            <a href="">Tops</a>
+            
+            <a href="">Tshirts</a>
+            
+            <a href="">Jeans</a>
+            
+            <a href="">Sweaters & Sweatshirts</a>
+
+            <a href="">Shorts & Skirts</a>
+
+            <a href="">Jackets & Coats</a>
+            
+            
+        </div>
+        
+        
+        
+        
+        
+        <div class="cat-menu">
+            <h1 class="h1-kids">Footwear</h1>
+            <a href="">Flats</a>
+            
+            <a href="">Casual Shoes</a>
+            
+            <a href="">Sandals</a>
+            
+            <a href="">Boots</a>
+            
+            <a href="">Sports Shoes & Floaters</a>
+            
+            
+        </div>
+    </div>
+
 </div>
