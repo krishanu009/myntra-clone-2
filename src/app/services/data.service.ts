@@ -32,9 +32,16 @@ export class DataService {
     {src:"assets/product/ss3.webp", name:"Runnign Shoes", brand:"Sparx", price:'1400',category:'Sports Shoes'},
     {src:"assets/product/ss4.webp", name:"Campus shoes", brand:"Campus", price:'999',category:'Sports Shoes'},
     {src:"assets/product/ss5.webp", name:"Sports Shoes", brand:"Sparx", price:'1299',category:'Sports Shoes'},
+    {src:"assets/product/mthirt1.jpg", name:"men's tshirt", brand:"Roadstar", price:'349',category:'T shirt'},
+    {src:"assets/product/mthirt2.webp", name:"men's tshirt", brand:"Roadstar", price:'499',category:'T shirt'},
+    {src:"assets/product/mtshirt3.webp", name:"men's tshirt", brand:"Roadstar", price:'299',category:'T shirt'},
+    {src:"assets/product/mthirt4.webp", name:"men's tshirt", brand:"Highlandrt", price:'788',category:'T shirt'},
+    {src:"assets/product/mtshirt5.jpg", name:"men's tshirt", brand:"Highlander", price:'999',category:'T shirt'},
+    {src:"assets/product/mtshirt6.webp", name:"men's tshirt", brand:"Livis", price:'1599',category:'T shirt'}
+
     ];
  
-  menCategories:any[]= ['Casual Shoes','Sports Shoes','Flip Flops','Formal Shoes','Sandals','Casual shirts','Jeans'];
+  menCategories:any[]= ['Casual Shoes','T shirt','Sports Shoes','Flip Flops','Formal Shoes','Sandals','Casual shirts','Jeans'];
   menBrand:any[] =['Puma','FAUSTO','Campus','ADIDAS','Sparx','U.S Polo Assn','Red Chief','Roadstar','Highlander','Livis',"Killer Jeans"];
   menPrice:any[] = ['Rs.111 to Rs. 7853','Rs.7853 to Rs,15055','Rs.15055 to Rs.22527','Rs.22527 to 29999'];
   // girl 

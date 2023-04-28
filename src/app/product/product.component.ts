@@ -4,7 +4,7 @@ import { FilterInfo } from '../filter-info.model';
 import { ProductFilters } from '../product-filters.model';
 import { FilterServiceService } from '../services/filter-service.service';
 import { DataService } from '../services/data.service';
-
+import { ActivatedRoute, Params } from '@angular/router';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -19,17 +19,35 @@ export class ProductComponent implements OnInit {
   brand:any[];
   price:any[];
 
-  constructor(private filterService: FilterServiceService, private dataService: DataService) {}
-@Input() selectedValues: any[];
-@Input() selectedGenderValueChnage: any;
+  constructor(private filterService: FilterServiceService, private dataService: DataService, private route: ActivatedRoute) {}
+ selectedValues: any[];
+ selectedGenderValueChnage: any;
 
   ngOnInit(): void {
-    console.log(this.selectedValues);
-    this.products = this.dataService.populateData('men','',this.selectedValues);
-    this.categories = this.dataService.populateFilters('men','categories');
-    this.brand = this.dataService.populateFilters('men','brand');
-    this.price = this.dataService.populateFilters('men','price');
+    // console.log(this.selectedValues);
+
+    
+    this.selectedValues = [];
+    
+
+    this.route.params.subscribe(
+      (params)=>{
+        // console.log(params);
+        this.selectedGenderValueChnage = params['gender'];
+        
+        this.selectedValues =JSON.parse(params['filters']);
+        // console.log(this.selectedValues);
+        // this.selectedValues = 
+      }
+    )
+    
+    this.products = this.dataService.populateData(this.selectedGenderValueChnage,'',this.selectedValues);
+    this.categories = this.dataService.populateFilters(this.selectedGenderValueChnage,'categories');
+    this.brand = this.dataService.populateFilters(this.selectedGenderValueChnage,'brand');
+    this.price = this.dataService.populateFilters(this.selectedGenderValueChnage,'price');
   }
+
+  
   // @Input() productCategory:string;
  
   productCategory:string ="Apparel";
