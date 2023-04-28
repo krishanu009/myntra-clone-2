@@ -11,6 +11,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  casualShirtArray: any[] = [{type:'CATEGORIES',value:'Casual shirts'}];
+  tShirtArray: any[] = [{type:'CATEGORIES',value:'T shirt'}];
+  casualShirt = JSON.stringify(this.casualShirtArray);
+  tshirt = JSON.stringify(this.tShirtArray);
   shadowDiv ='none';
   
   hover1 = false;
@@ -26,7 +31,7 @@ export class NavbarComponent implements OnInit {
   let id = target.id;
   id= id.slice(4);
   this.hover[id] = true;
-  console.log(this.hover[id]);
+  // console.log(this.hover[id]);
   }
   itemOut()
   {
@@ -41,7 +46,7 @@ export class NavbarComponent implements OnInit {
     //  console.log("content 1 " + this.content1);
   this.content[event] = true;
   this.shadowDiv = 'block';
-  console.log(this.content);
+  // console.log(this.content);
   }
   contentOut(event: any)
   {
@@ -51,7 +56,7 @@ export class NavbarComponent implements OnInit {
     this.shadowDiv = 'none';
     this.hover.fill(false);
     this.content.fill(false);
-  console.log(this.content);
+  // console.log(this.content);
   }
   hideElement()
   {
