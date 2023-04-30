@@ -13,7 +13,7 @@ export class ProductViewComponent {
   
 mouseOver()
 {
-  console.log("working");
+  // console.log("working");
 }
 
 }

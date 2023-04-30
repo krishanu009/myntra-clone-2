@@ -22,7 +22,8 @@ export class ProductComponent implements OnInit {
   constructor(private filterService: FilterServiceService, private dataService: DataService, private route: ActivatedRoute) {}
  selectedValues: any[];
  selectedGenderValueChnage: any;
-
+viewType: any;
+ProductTitle:any;
   ngOnInit(): void {
     // console.log(this.selectedValues);
 
@@ -34,24 +35,27 @@ export class ProductComponent implements OnInit {
       (params)=>{
         // console.log(params);
         this.selectedGenderValueChnage = params['gender'];
-        
+        this.viewType = params['type'];
         this.selectedValues =JSON.parse(params['filters']);
+        this.ProductTitle =  this.selectedGenderValueChnage + ' ' + this.viewType;
         // console.log(this.selectedValues);
         // this.selectedValues = 
+        this.products = this.dataService.populateData(this.selectedGenderValueChnage.toLowerCase(),'',this.selectedValues);
+    this.categories = this.dataService.populateFilters(this.selectedGenderValueChnage.toLowerCase(),'categories');
+    this.brand = this.dataService.populateFilters(this.selectedGenderValueChnage.toLowerCase(),'brand');
+    this.price = this.dataService.populateFilters(this.selectedGenderValueChnage.toLowerCase(),'price');
+    this.productCount = this.products.length;
       }
     )
     
-    this.products = this.dataService.populateData(this.selectedGenderValueChnage,'',this.selectedValues);
-    this.categories = this.dataService.populateFilters(this.selectedGenderValueChnage,'categories');
-    this.brand = this.dataService.populateFilters(this.selectedGenderValueChnage,'brand');
-    this.price = this.dataService.populateFilters(this.selectedGenderValueChnage,'price');
+    
   }
 
   
   // @Input() productCategory:string;
  
   productCategory:string ="Apparel";
-  productCount:string = "456";
+  productCount:any;
   searchInput:string ="";
   selectedGenderValue: string = 'Boys';
   searchBar:boolean = false;
@@ -92,6 +96,7 @@ genderSelection(event:any)
   this.brand = this.dataService.populateFilters(this.selectedGenderValueChnage.toLowerCase(), 'brand');
   this.price = this.dataService.populateFilters(this.selectedGenderValueChnage.toLowerCase(), 'price');
   // console.log(this.categories);
+  this.productCount = this.products.length;
 }
 chipCloseEmitted(event:any)
 {
@@ -153,8 +158,9 @@ selectionChange(event:any)
     // this.selectedValues.push(event.option);
     
   }
-   console.log(this.selectedValues);
+  //  console.log(this.selectedValues);
   this.products = this.dataService.populateData(this.selectedGenderValueChnage.toLowerCase(),'',this.selectedValues);
-
+  this.productCount = this.products.length;
 }
+
 }

@@ -12,10 +12,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  casualShirtArray: any[] = [{type:'CATEGORIES',value:'Casual shirts'}];
-  tShirtArray: any[] = [{type:'CATEGORIES',value:'T shirt'}];
-  casualShirt = JSON.stringify(this.casualShirtArray);
-  tshirt = JSON.stringify(this.tShirtArray);
+ 
+  casualShirt = JSON.stringify([{type:'CATEGORIES',value:'Casual shirts'}]);
+  formalShirt = JSON.stringify([{type:'CATEGORIES',value:'Formal shirts'}]);
+  tshirt = JSON.stringify( [{type:'CATEGORIES',value:'T shirt'}]);
   shadowDiv ='none';
   
   hover1 = false;

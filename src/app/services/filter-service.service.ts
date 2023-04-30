@@ -13,6 +13,6 @@ export class FilterServiceService {
     
   onUncheck(event:any) {    
     this.invokeUncheck.emit(event);
-    console.log(event);    
+    // console.log(event);    
   }    
 }

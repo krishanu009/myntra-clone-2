@@ -29,9 +29,10 @@
 
         <div class="top-panel">
             <div class="top-panel-content2">
-                <p>Homne/Footwear</p>
-                <p><strong>{{productCategory}}</strong> - {{productCount}} items</p>
-                <Strong>FILTERS</Strong>
+                <p style="font-size: 14px;">Home / clothing / <strong>{{ProductTitle}}</strong></p>
+                <div style="display: inline-block;font-size: 14px;"><strong >{{ProductTitle}}</strong></div> - <div style="display: inline-block;color: rgb(151, 145, 145);font-size: 14px;">{{productCount}} items</div>
+                
+                <div style="margin-top: 30px;"><Strong>FILTERS</Strong></div>
             </div>
             
         </div>
@@ -61,7 +62,7 @@
             </div> -->
 
             <div class="filter2">
-                <app-custom-radio [defaultSelect]="selectedGenderValueChnage" [filters]="genders" (genderSelection)="genderSelection($event)"></app-custom-radio>
+                <app-custom-radio *ngIf="viewType ==='Apparel'" [defaultSelect]="selectedGenderValueChnage" [filters]="genders" (genderSelection)="genderSelection($event)"></app-custom-radio>
                 <app-custom-multi-filter [filters]="categories" [title]="filterTitles[0]" [receivedSelectedValues]="selectedValues" (selectionChange)="selectionChange($event)" ></app-custom-multi-filter>
                 <app-custom-multi-filter [filters]="brand" [title]="filterTitles[1]" [receivedSelectedValues]="selectedValues" (selectionChange)="selectionChange($event)"></app-custom-multi-filter>
                 <app-custom-multi-filter [filters]="price" [title]="filterTitles[2]" [receivedSelectedValues]="selectedValues" (selectionChange)="selectionChange($event)"></app-custom-multi-filter>

@@ -10,10 +10,12 @@ export class CustomRadioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // console.log(this.defaultSelect);
+    this.selectedOption = this.defaultSelect;
   }
   @Input() filters:any[]=[];
   @Input() title:string="";
-  @Input() defaultSelect="";
+  @Input() defaultSelect;
   @Output() genderSelection: EventEmitter<any> = new EventEmitter();
   selectedOption:string;
   ngOnChanges(): void {

@@ -11,7 +11,10 @@ export class DataService {
   //Men 
   menProducts: any[] = [
     {src:"assets/product/wtshirt2.jpg", name:"Men Regular Fit Shirt", brand:"Roadstar", price:'984', category:'Casual shirts'},
-    {src:"assets/product/redshirt2.jpg", name:"Men Regular Fit Shirt", brand:"U.S Polo Assn", price:'700', category:'Casual shirts'}, 
+    {src:"assets/product/redshirt2.jpg", name:"Men Regular Fit Shirt", brand:"U.S Polo Assn", price:'700', category:'Casual shirts'},
+    {src:"assets/product/fshirt1.webp", name:"Men Formal Shirt", brand:"U.S Polo Assn", price:'700', category:'Formal shirts'},
+    {src:"assets/product/fshirt2.jpg", name:"Men Formal Shirt", brand:"U.S Polo Assn", price:'700', category:'Formal shirts'},
+    {src:"assets/product/fshirt4.webp", name:"Men Formal Shirt", brand:"U.S Polo Assn", price:'700', category:'Formal shirts'}, 
     {src:"assets/product/wtshirt2.jpg", name:"Men Regular Fit Shirt", brand:"U.S Polo Assn", price:'1000',category:'Casual shirts'},
     {src:"assets/product/shirt3.jpg", name:"Men Regular Fit Shirt", brand:"Highlander", price:'1400',category:'Casual shirts'},
     {src:"assets/product/halfshirt.webp", name:"Men Regular Fit Shirt", brand:"Highlander", price:'984',category:'Casual shirts'},
@@ -41,7 +44,7 @@ export class DataService {
 
     ];
  
-  menCategories:any[]= ['Casual Shoes','T shirt','Sports Shoes','Flip Flops','Formal Shoes','Sandals','Casual shirts','Jeans'];
+  menCategories:any[]= ['Casual Shoes','T shirt','Sports Shoes','Flip Flops','Formal Shoes','Sandals','Casual shirts','Formal shirts','Jeans'];
   menBrand:any[] =['Puma','FAUSTO','Campus','ADIDAS','Sparx','U.S Polo Assn','Red Chief','Roadstar','Highlander','Livis',"Killer Jeans"];
   menPrice:any[] = ['Rs.111 to Rs. 7853','Rs.7853 to Rs,15055','Rs.15055 to Rs.22527','Rs.22527 to 29999'];
   // girl 

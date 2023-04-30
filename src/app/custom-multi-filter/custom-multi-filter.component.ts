@@ -56,7 +56,7 @@ export class CustomMultiFilterComponent implements OnInit {
     this.receivedSelectedValues.forEach( (item) => {
       let index=-1;
        index = this.filterOptions.findIndex(element => element.option === item.value);
-       console.log(index);
+      //  console.log(index);
       if(index!==-1)
       {
         this.filterOptions[index].selected = true;
