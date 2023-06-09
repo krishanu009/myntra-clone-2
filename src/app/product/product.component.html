@@ -78,7 +78,9 @@
                 <div class="product-view" *ngFor="let i of products" style="display: inline-block;">
                     <app-product-view [product]="i" ></app-product-view>
                 </div>
-                
+                <div class="no-product" *ngIf="products.length==0">
+                    <p>No Products Available, Please Browse other products!</p>
+                </div>
             </div>
           </div>
 

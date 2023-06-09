@@ -16,6 +16,16 @@ export class NavbarComponent implements OnInit {
   casualShirt = JSON.stringify([{type:'CATEGORIES',value:'Casual shirts'}]);
   formalShirt = JSON.stringify([{type:'CATEGORIES',value:'Formal shirts'}]);
   tshirt = JSON.stringify( [{type:'CATEGORIES',value:'T shirt'}]);
+  jeans = JSON.stringify( [{type:'CATEGORIES',value:'Jeans'}]);
+casualShoes = JSON.stringify( [{type:'CATEGORIES',value:'Casual Shoes'}]);
+sweatshirt = JSON.stringify( [{type:'CATEGORIES',value:'Sweatshirt'}]);
+sweaters = JSON.stringify( [{type:'CATEGORIES',value:'Sweaters'}]);
+suits = JSON.stringify( [{type:'CATEGORIES',value:'suits'}]);
+jackets = JSON.stringify( [{type:'CATEGORIES',value:'jackets'}]);
+casualTrousers = JSON.stringify( [{type:'CATEGORIES',value:'Casual Trousers'}]);
+FormalTrousers = JSON.stringify( [{type:'CATEGORIES',value:'Formal trousers'}]);
+shorts = JSON.stringify( [{type:'CATEGORIES',value:'Shorts'}]);
+TrackPants = JSON.stringify( [{type:'CATEGORIES',value:'Track Pants'}]);
   shadowDiv ='none';
   
   hover1 = false;
@@ -61,5 +71,10 @@ export class NavbarComponent implements OnInit {
   hideElement()
   {
     this.shadowDiv = 'none';
+  }
+  clicked()
+  {
+    this.hover.fill(false);
+    this.content.fill(false);
   }
 }
