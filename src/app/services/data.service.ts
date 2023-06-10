@@ -285,4 +285,35 @@ export class DataService {
     }
   }
 
+  searchData(key: any): any[]
+  {
+    
+    
+
+    // const results = this.menProducts.filter(item =>
+    //   Object.values(item).some(
+    //     value => typeof value === 'string' && value.toLowerCase().includes(key)
+    //   )
+    // );
+    // const results2 = this.girlProducts.filter(item =>
+    //   Object.values(item).some(
+    //     value => typeof value === 'string' && value.toLowerCase().includes(key)
+    //   )
+    // );
+    const results = [];
+
+    this.menProducts.forEach(item => {
+      if (Object.values(item).some(value => typeof value === 'string' && value.toLowerCase().includes(key.toLowerCase()))) {
+        results.push(item);
+      }
+    });
+    this.girlProducts.forEach(item => {
+      if (Object.values(item).some(value => typeof value === 'string' && value.toLowerCase().includes(key.toLowerCase()))) {
+        results.push(item);
+      }
+    });
+
+    return results;
+  }
+
 }

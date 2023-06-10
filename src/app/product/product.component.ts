@@ -33,8 +33,8 @@ ProductTitle:any;
 
     this.route.params.subscribe(
       (params)=>{
-        // console.log(params);
-        this.selectedGenderValueChnage = params['gender'];
+        console.log(params);
+        this.selectedGenderValueChnage = params['gender'].toLowerCase();
         this.viewType = params['type'];
         this.selectedValues =JSON.parse(params['filters']);
         this.ProductTitle =  this.selectedGenderValueChnage + ' ' + this.viewType;

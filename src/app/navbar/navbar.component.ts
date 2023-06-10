@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private dataService: DataService) { }
+searchInput: String;
+searchResults:any[];
   ngOnInit(): void {
   }
 
@@ -26,6 +29,14 @@ casualTrousers = JSON.stringify( [{type:'CATEGORIES',value:'Casual Trousers'}]);
 FormalTrousers = JSON.stringify( [{type:'CATEGORIES',value:'Formal trousers'}]);
 shorts = JSON.stringify( [{type:'CATEGORIES',value:'Shorts'}]);
 TrackPants = JSON.stringify( [{type:'CATEGORIES',value:'Track Pants'}]);
+gtshirt =  JSON.stringify( [{type:'CATEGORIES',value:'T shirts'}]);
+
+searchFilters: any[] =[{name:"casual shirts", link:['/product/Men/Casual Shirts',this.casualShirt] },
+{name:"formal shirts", link:['/product/Men/Formal Shirts',this.formalShirt] },
+{name:"Men tshirt", link:['/product/Men/T shirt',this.tshirt] },
+{name:"Men Jeans", link:['/product/Men/Jeans',this.jeans] },
+{name:"casual shoes", link:['/product/Men/Casual shoes',this.casualShoes] },
+{name:"Girl tshirts", link:['/product/Girls/T shirts',this.gtshirt] }]
   shadowDiv ='none';
   
   hover1 = false;
@@ -76,5 +87,38 @@ TrackPants = JSON.stringify( [{type:'CATEGORIES',value:'Track Pants'}]);
   {
     this.hover.fill(false);
     this.content.fill(false);
+  }
+  searchClicked()
+  {
+    this.searchInput="";
+    this.searchResults =[];
+  }
+  searching(event)
+  {
+
+    // if(this.searchInput.length>=3)
+    // {
+    //   this.searchResults = this.dataService.searchData(this.searchInput);
+    // }
+    // else
+    // {
+    //   this.searchResults =[];
+    // }
+
+    if(this.searchInput.length>=3)
+    {
+      
+      this.searchResults = this.searchFilters.filter(item=>item.name.toLowerCase().includes(this.searchInput.toLowerCase()));
+      
+      console.log(this.searchResults);
+    }
+    else
+    {
+      this.searchResults =[];
+    }
+
+    // console.log(this.searchInput);
+    
+    
   }
 }

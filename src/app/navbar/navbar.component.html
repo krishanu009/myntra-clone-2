@@ -103,7 +103,13 @@
                 </div>
                 <div class="search-input">
                     <input type="text" class="form-control search-input"
-                        placeholder="Search For Products, Brands and More" id="usr">
+                        placeholder="Search For Products, Brands and More" id="usr" [(ngModel)]="searchInput" (input)="searching($event)" >
+                </div>
+                <div class="search-results">
+                    <div *ngFor="let i of searchResults" class="search-result-item">
+        
+                         <a class="search-result-item" [routerLink]="i.link" (click)="searchClicked()">{{i.name}}</a>
+                    </div>
                 </div>
             </div>
 
@@ -144,47 +150,47 @@
     <div class="row">
         <div class="cat-menu" >
             <h1 class="h1-men">Topwear</h1>
-            <a [routerLink]="['/product/Men/T shirt',tshirt]" (click)="clicked()">T Shirts</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/T shirt',tshirt]" (click)="clicked()">T Shirts</a>
             
-            <a [routerLink]="['/product/Men/Casual Shirts',casualShirt]" (click)="clicked()">Casual Shirts</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/Casual Shirts',casualShirt]" (click)="clicked()">Casual Shirts</a>
             
-            <a [routerLink]="['/product/Men/Formal Shirts',formalShirt]" (click)="clicked()">Formal Shirts</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/Formal Shirts',formalShirt]" (click)="clicked()">Formal Shirts</a>
             
-            <a [routerLink]="['/product/Men/Sweatshirts',sweatshirt]" (click)="clicked()">Sweatshirts</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/Sweatshirts',sweatshirt]" (click)="clicked()">Sweatshirts</a>
             
-            <a [routerLink]="['/product/Men/sweaters',sweaters]" (click)="clicked()">Sweaters</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/sweaters',sweaters]" (click)="clicked()">Sweaters</a>
             
-            <a [routerLink]="['/product/Men/jackets',jackets]" (click)="clicked()">Jackets</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/jackets',jackets]" (click)="clicked()">Jackets</a>
             
-            <a [routerLink]="['/product/Men/suits',suits]" (click)="clicked()">Suits</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/suits',suits]" (click)="clicked()">Suits</a>
             
         </div>
         <div class="cat-menu">
             <h1 class="h1-men">Bottomwear</h1>
-            <a [routerLink]="['/product/Men/Jeans',jeans]" (click)="clicked()">Jeans</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/Jeans',jeans]" (click)="clicked()">Jeans</a>
             
-            <a [routerLink]="['/product/Men/Casual Trausers',casualTrousers]" (click)="clicked()">Casual Trousers</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/Casual Trausers',casualTrousers]" (click)="clicked()">Casual Trousers</a>
             
-            <a [routerLink]="['/product/Men/Formal Trousers',FormalTrousers]" (click)="clicked()">Formal Trousers</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/Formal Trousers',FormalTrousers]" (click)="clicked()">Formal Trousers</a>
             
-            <a [routerLink]="['/product/Men/shorts',shorts]" (click)="clicked()">Shorts</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/shorts',shorts]" (click)="clicked()">Shorts</a>
             
-            <a [routerLink]="['/product/Men/Track Pants & Joggers',TrackPants]" (click)="clicked()">Track Pants & Joggers</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/Track Pants & Joggers',TrackPants]" (click)="clicked()">Track Pants & Joggers</a>
             
             
         </div>
 
         <div class="cat-menu">
             <h1 class="h1-men">Footwear</h1>
-            <a [routerLink]="['/product/Men/JCasual Shoes',casualShoes]" (click)="clicked()">Casual Shoes</a>
+            <a class="nav-bar-a" [routerLink]="['/product/Men/JCasual Shoes',casualShoes]" (click)="clicked()">Casual Shoes</a>
             
-            <a href="">Sports Shoes</a>
+            <a class="nav-bar-a" href="">Sports Shoes</a>
             
-            <a href="">Sandals</a>
+            <a class="nav-bar-a" href="">Sandals</a>
             
-            <a href="">Flip Flops</a>
+            <a class="nav-bar-a" href="">Flip Flops</a>
             
-            <a href="">Socks</a>
+            <a class="nav-bar-a" href="">Socks</a>
             
             
         </div>
@@ -199,17 +205,17 @@
         <div class="cat-menu" >
             <h1 class="h1-women">Indian & Fusion Wear</h1>
 
-            <a href="">Kurtas & Suits</a>  
+            <a class="nav-bar-a" href="">Kurtas & Suits</a>  
             
-            <a href="">Sarees</a>
+            <a class="nav-bar-a" href="">Sarees</a>
             
-            <a href="">Ethnic Wear</a>
+            <a class="nav-bar-a" href="">Ethnic Wear</a>
             
-            <a href="">Leggings</a>
+            <a class="nav-bar-a" href="">Leggings</a>
             
-            <a href="">Salwars & Churidars</a>
+            <a class="nav-bar-a" href="">Salwars & Churidars</a>
             
-            <a href="">Jackets</a>
+            <a class="nav-bar-a" href="">Jackets</a>
             
         </div>
 
@@ -217,19 +223,19 @@
    
         <div class="cat-menu">
             <h1 class="h1-women">Western Wear</h1>   
-            <a href=""> Dresses</a>
+            <a class="nav-bar-a" href=""> Dresses</a>
             
-            <a href="">Tops</a>
+            <a class="nav-bar-a" href="">Tops</a>
             
-            <a href="">Tshirts</a>
+            <a class="nav-bar-a" href="">Tshirts</a>
             
-            <a href="">Jeans</a>
+            <a class="nav-bar-a" href="">Jeans</a>
             
-            <a href="">Sweaters & Sweatshirts</a>
+            <a class="nav-bar-a" href="">Sweaters & Sweatshirts</a>
 
-            <a href="">Shorts & Skirts</a>
+            <a class="nav-bar-a" href="">Shorts & Skirts</a>
 
-            <a href="">Jackets & Coats</a>
+            <a class="nav-bar-a" href="">Jackets & Coats</a>
             
             
         </div>
@@ -240,15 +246,15 @@
         
         <div class="cat-menu">
             <h1 class="h1-women">Footwear</h1>
-            <a href="">Flats</a>
+            <a class="nav-bar-a" href="">Flats</a>
             
-            <a href="">Casual Shoes</a>
+            <a class="nav-bar-a" href="">Casual Shoes</a>
             
-            <a href="">Sandals</a>
+            <a class="nav-bar-a" href="">Sandals</a>
             
-            <a href="">Boots</a>
+            <a class="nav-bar-a" href="">Boots</a>
             
-            <a href="">Sports Shoes & Floaters</a>
+            <a class="nav-bar-a" href="">Sports Shoes & Floaters</a>
             
             
         </div>
@@ -263,17 +269,17 @@
         <div class="cat-menu" >
             <h1 class="h1-kids">Indian & Fusion Wear</h1>
 
-            <a href="">Kurtas & Suits</a>  
+            <a class="nav-bar-a" href="">Kurtas & Suits</a>  
             
-            <a href="">Sarees</a>
+            <a class="nav-bar-a" href="">Sarees</a>
             
-            <a href="">Ethnic Wear</a>
+            <a class="nav-bar-a" href="">Ethnic Wear</a>
             
-            <a href="">Leggings</a>
+            <a class="nav-bar-a" href="">Leggings</a>
             
-            <a href="">Salwars & Churidars</a>
+            <a class="nav-bar-a" href="">Salwars & Churidars</a>
             
-            <a href="">Jackets</a>
+            <a class="nav-bar-a" href="">Jackets</a>
             
         </div>
 
@@ -281,19 +287,19 @@
    
         <div class="cat-menu">
             <h1 class="h1-kids">Western Wear</h1>   
-            <a href=""> Dresses</a>
+            <a class="nav-bar-a" href=""> Dresses</a>
             
-            <a href="">Tops</a>
+            <a class="nav-bar-a" href="">Tops</a>
             
-            <a href="">Tshirts</a>
+            <a class="nav-bar-a" href="">Tshirts</a>
             
-            <a href="">Jeans</a>
+            <a class="nav-bar-a" href="">Jeans</a>
             
-            <a href="">Sweaters & Sweatshirts</a>
+            <a class="nav-bar-a" href="">Sweaters & Sweatshirts</a>
 
-            <a href="">Shorts & Skirts</a>
+            <a class="nav-bar-a" href="">Shorts & Skirts</a>
 
-            <a href="">Jackets & Coats</a>
+            <a class="nav-bar-a" href="">Jackets & Coats</a>
             
             
         </div>
@@ -304,15 +310,15 @@
         
         <div class="cat-menu">
             <h1 class="h1-kids">Footwear</h1>
-            <a href="">Flats</a>
+            <a class="nav-bar-a" href="">Flats</a>
             
-            <a href="">Casual Shoes</a>
+            <a class="nav-bar-a" href="">Casual Shoes</a>
             
-            <a href="">Sandals</a>
+            <a class="nav-bar-a" href="">Sandals</a>
             
-            <a href="">Boots</a>
+            <a class="nav-bar-a" href="">Boots</a>
             
-            <a href="">Sports Shoes & Floaters</a>
+            <a class="nav-bar-a" href="">Sports Shoes & Floaters</a>
             
             
         </div>
