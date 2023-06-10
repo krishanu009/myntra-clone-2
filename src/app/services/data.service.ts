@@ -143,10 +143,10 @@ export class DataService {
             count ++;
             if(count == 1)
               {
-                filteredProducts = filteredProducts.filter(item => item.price === values.value );
+                filteredProducts = filteredProducts.filter(item => parseInt(item.price) <= parseInt(values.value) );
               }
               else{
-                filteredProducts = filteredProducts.concat(this.menProducts.filter(item => item.price === values.value )) ;
+                filteredProducts = filteredProducts.concat(this.menProducts.filter(item => parseInt(item.price) <= parseInt(values.value) )) ;
               }
             
           }

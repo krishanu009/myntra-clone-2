@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-
+menProd = JSON.stringify( [{type:'PRICE',value:'1000'}]);
   ngOnInit(): void {
   }
   images = ['assets/slider1.webp',
@@ -17,14 +17,24 @@ export class HomeComponent implements OnInit {
             'assets/slider4.webp',
             'assets/slider5.webp',
             'assets/slider6.webp']
-  row1: any[] = ['assets/rows/row1-1.webp',
-                     'assets/rows/row1-2.jpg',
-                     'assets/rows/row1-3.webp',
-                     'assets/rows/row1-4.webp',
-                     'assets/rows/row1-5.webp',
-                     'assets/rows/row1-6.webp',
-                     'assets/rows/row1-7.webp',
-                     'assets/rows/row1-8.webp',
+  // row1: any[] = ['assets/rows/row1-1.webp',
+  //                    'assets/rows/row1-2.jpg',
+  //                    'assets/rows/row1-3.webp',
+  //                    'assets/rows/row1-4.webp',
+  //                    'assets/rows/row1-5.webp',
+  //                    'assets/rows/row1-6.webp',
+  //                    'assets/rows/row1-7.webp',
+  //                    'assets/rows/row1-8.webp',
+  //                   ];
+
+                    row1: any[] = [{src:'assets/rows/row1-1.webp',link:this.menProd},
+                     {src:'assets/rows/row1-2.jpg',link:['/product/Men/Clothing',this.menProd]},
+                     {src:'assets/rows/row1-3.webp',link:['/product/Men/Clothing',this.menProd]},
+                     {src:'assets/rows/row1-4.webp',link:['/product/Men/Clothing',this.menProd]},
+                     {src:'assets/rows/row1-5.webp',link:['/product/Men/Clothing',this.menProd]},
+                     {src:'assets/rows/row1-6.webp',link:['/product/Men/Clothing',this.menProd]},
+                     {src:'assets/rows/row1-7.webp',link:['/product/Men/Clothing',this.menProd]},
+                     {src:'assets/rows/row1-8.webp',link:['/product/Men/Clothing',this.menProd]}
                     ];
  row2: any[] = ['assets/rows/row2-1.webp',
                     'assets/rows/row2-2.webp',
