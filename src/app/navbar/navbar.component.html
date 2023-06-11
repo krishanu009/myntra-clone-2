@@ -333,5 +333,18 @@
 </div>
 <!-- mobile-menu -->
 <div class="mobile-menu" [ngClass]="{'slide-in': showCard, 'slide-out': !showCard}" #cardContainer>
+    <div class="mobile-menu-items">
+        <ul>
+            <li class="mobile-menue-list" *ngFor="let item of items" (click)="toggleSubItems(item)">
+              {{ item.name }}
+              <ul *ngIf="item.showSubItems">
+                <li class="mobile-menue-sublist" *ngFor="let subItem of item.subItems">
+                  {{ subItem.name }}
+                </li>
+              </ul>
+            </li>
+          </ul>
+    </div>
+    
     
 </div>

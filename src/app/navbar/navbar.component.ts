@@ -138,4 +138,36 @@ searchFilters: any[] =[{name:"casual shirts", link:['/product/Men/Casual Shirts'
       this.menuClick();
     }
   }
+  items = [
+    {
+      name: 'Men',
+      showSubItems: false,
+      subItems: [
+        { name: 'Sub-Item 1.1' },
+        { name: 'Sub-Item 1.2' },
+        { name: 'Sub-Item 1.3' }
+      ]
+    },
+    {
+      name: 'Women',
+      showSubItems: false,
+      subItems: [
+        { name: 'Sub-Item 2.1' },
+        { name: 'Sub-Item 2.2' }
+      ]
+    },
+    {
+      name: 'Girls',
+      showSubItems: false,
+      subItems: [
+        { name: 'Sub-Item 3.1' },
+        { name: 'Sub-Item 3.2' },
+        { name: 'Sub-Item 3.3' }
+      ]
+    }
+  ];
+
+  toggleSubItems(item: any) {
+    item.showSubItems = !item.showSubItems;
+  }
 }

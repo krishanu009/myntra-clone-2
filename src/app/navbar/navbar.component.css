@@ -47,6 +47,27 @@
       .slide-out {
         transform: translateX(-100%);
       }
+      .mobile-menu-items
+      {
+        padding-top: 100px;
+        padding-left: 30px;
+      }
+      .mobile-menue-list
+      {
+        font-weight: bold;
+        font-size: large;
+      }
+      .mobile-menue-sublist
+      {
+        font-weight:normal;
+        font-size: small;
+        margin-left: 20px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
      
   }
   
