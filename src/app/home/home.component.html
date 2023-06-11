@@ -76,7 +76,7 @@
             <h1 class="header-text">DEAL OF THE DAY</h1>
             <div class="row-1">
                 
-                <a *ngFor="let i of row1" [routerLink]="['/product/Men/Clothing',menProd]" ><img  src="{{i.src}}" class="row-img"></a>
+                <a *ngFor="let i of row1" [routerLink]="i.link" ><img  src="{{i.src}}" class="row-img"></a>
             </div>
         </div>
     

@@ -9,6 +9,10 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 menProd = JSON.stringify( [{type:'PRICE',value:'1000'}]);
+menProd2 = JSON.stringify( [{type:'PRICE',value:'2000'}]);
+menProd3 = JSON.stringify( [{type:'PRICE',value:'1500'}]);
+menProd4 = JSON.stringify( [{type:'PRICE',value:'500'}]);
+casualShoes = JSON.stringify( [{type:'CATEGORIES',value:'Casual Shoes'}]);
   ngOnInit(): void {
   }
   images = ['assets/slider1.webp',
@@ -26,14 +30,14 @@ menProd = JSON.stringify( [{type:'PRICE',value:'1000'}]);
   //                    'assets/rows/row1-7.webp',
   //                    'assets/rows/row1-8.webp',
   //                   ];
-
-                    row1: any[] = [{src:'assets/rows/row1-1.webp',link:this.menProd},
-                     {src:'assets/rows/row1-2.jpg',link:['/product/Men/Clothing',this.menProd]},
-                     {src:'assets/rows/row1-3.webp',link:['/product/Men/Clothing',this.menProd]},
-                     {src:'assets/rows/row1-4.webp',link:['/product/Men/Clothing',this.menProd]},
-                     {src:'assets/rows/row1-5.webp',link:['/product/Men/Clothing',this.menProd]},
-                     {src:'assets/rows/row1-6.webp',link:['/product/Men/Clothing',this.menProd]},
-                     {src:'assets/rows/row1-7.webp',link:['/product/Men/Clothing',this.menProd]},
+  
+                    row1: any[] = [{src:'assets/rows/row1-1.webp',link:['/product/Men/Clothing',this.menProd]},
+                     {src:'assets/rows/row1-2.jpg',link:['/product/Men/Casual shoes',this.casualShoes]},
+                     {src:'assets/rows/row1-3.webp',link:['/product/Men/Casual shoes',this.casualShoes]},
+                     {src:'assets/rows/row1-4.webp',link:['/product/Men/Casual shoes',this.casualShoes]},
+                     {src:'assets/rows/row1-5.webp',link:['/product/Men/Clothing',this.menProd2]},
+                     {src:'assets/rows/row1-6.webp',link:['/product/Men/Clothing',this.menProd3]},
+                     {src:'assets/rows/row1-7.webp',link:['/product/Men/Clothing',this.menProd4]},
                      {src:'assets/rows/row1-8.webp',link:['/product/Men/Clothing',this.menProd]}
                     ];
  row2: any[] = ['assets/rows/row2-1.webp',

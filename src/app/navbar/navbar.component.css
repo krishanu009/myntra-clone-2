@@ -11,6 +11,56 @@
     width: 108px;
 }
 
+@media (max-width: 600px) {
+    .logo{
+        width:90px;
+    }
+    .menu-items
+    {
+        display: none;
+    }
+    .search
+    {
+        display: none;
+    }
+    .display-icons
+    {
+        display: none;
+    }
+    .menu-bar {
+        display: block;
+       
+      }
+      .mobile-menu
+      {
+        display: block;
+        height: 870px;
+        width: 307px;
+        background-color: white;
+        position: fixed;
+        z-index: 3;
+      }
+      .slide-in {
+        transform: translateX(0);
+      }
+      
+      .slide-out {
+        transform: translateX(-100%);
+      }
+     
+  }
+  
+  @media screen and (min-width: 601px) {
+    .menu-bar {
+      display: none;
+      
+    }
+    .mobile-menu
+      {
+        display: none;
+      }
+}
+
 .items
 {
     margin-top: 14px;

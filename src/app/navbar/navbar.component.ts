@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener, ViewChild} from '@angular/core';
 import { DataService } from '../services/data.service';
 import { filter } from 'rxjs';
 
@@ -10,8 +10,14 @@ import { filter } from 'rxjs';
 export class NavbarComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
+  @ViewChild('cardContainer') cardContainer!: ElementRef;
+  @ViewChild('menuBar') menuBar!: ElementRef;
+  
 searchInput: String;
 searchResults:any[];
+showCard = false;
+
+  
   ngOnInit(): void {
   }
 
@@ -120,5 +126,16 @@ searchFilters: any[] =[{name:"casual shirts", link:['/product/Men/Casual Shirts'
     // console.log(this.searchInput);
     
     
+  }
+  menuClick()
+  {
+    console.log("clicked");
+    this.showCard = !this.showCard;
+  }
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (this.showCard && !this.cardContainer.nativeElement.contains(event.target) && !this.menuBar.nativeElement.contains(event.target)) {
+      this.menuClick();
+    }
   }
 }
