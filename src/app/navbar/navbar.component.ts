@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
 searchInput: String;
 searchResults:any[];
 showCard = false;
-
+menuMen = false;
   
   ngOnInit(): void {
   }
@@ -138,36 +138,61 @@ searchFilters: any[] =[{name:"casual shirts", link:['/product/Men/Casual Shirts'
       this.menuClick();
     }
   }
+  // items = [
+  //   {
+  //     name: 'Men',
+  //     showSubItems: false,
+  //     subItems: [
+  //       { name: 'Topwear',showSubItems2: false, subItems2:[{name:"T shirt",link:['/product/Men/T shirt',this.tshirt]},
+  //       {name:"Casual shirts",showSubItems2: false,link:['/product/Men/Casual Shirts',this.casualShirt]},
+  //     {name:"Formal SHirt",showSubItems2: false,link:['/product/Men/Formal Shirts',this.formalShirt]}] },
+  //       { name: 'Bottmwear', showSubItems2: false,subItems2:[{name:"Jeans",link:['/product/Men/Jeans',this.jeans]}] },
+  //       { name: 'Footwear', showSubItems2: false,subItems2:[{name:"Casual Shoes",link:[['/product/Men/JCasual Shoes',this.casualShoes]}]}] }
+  //     ]
+  //   },
+  //   {
+  //     name: 'Girls',
+  //     showSubItems: false,
+  //     subItems: [
+  //       { name: 'Topwear' ,showSubItems2: false, subItems2:[{name:"T shirt",link:[]}]}
+  //     ]
+  //   }
+
   items = [
     {
       name: 'Men',
       showSubItems: false,
       subItems: [
-        { name: 'Sub-Item 1.1' },
-        { name: 'Sub-Item 1.2' },
-        { name: 'Sub-Item 1.3' }
-      ]
-    },
-    {
-      name: 'Women',
-      showSubItems: false,
-      subItems: [
-        { name: 'Sub-Item 2.1' },
-        { name: 'Sub-Item 2.2' }
+        { name: 'T shirt',showSubItems2: false,link:['/product/Men/T shirt',this.tshirt]},
+        { name: 'Casual Shirts',showSubItems2: false,link:['/product/Men/Casual Shirt',this.casualShirt]},
+        { name: 'Formal Shirts',showSubItems2: false,link:['/product/Men/Formal Shirt',this.formalShirt]},
+        { name: 'Jeans',showSubItems2: false,link:['/product/Men/Jeans',this.jeans]},
+        { name: 'Casual Shoes',showSubItems2: false,link:['/product/Men/Casual Shoes',this.casualShoes]},
       ]
     },
     {
       name: 'Girls',
       showSubItems: false,
       subItems: [
-        { name: 'Sub-Item 3.1' },
-        { name: 'Sub-Item 3.2' },
-        { name: 'Sub-Item 3.3' }
+        { name: 'T shirts',showSubItems2: false,link:['/product/girls/Casual Shoes',this.gtshirt]},
+        
       ]
     }
   ];
+    // {
+    //   name: 'Girls',
+    //   showSubItems: false,
+    //   subItems: [
+    //     { name: 'Sub-Item 3.1' },
+    //     { name: 'Sub-Item 3.2' },
+    //     { name: 'Sub-Item 3.3' }
+    //   ]
+    // }
+  
 
-  toggleSubItems(item: any) {
-    item.showSubItems = !item.showSubItems;
-  }
+    mobileMenuClick():void
+    {
+         this.menuClick();
+    }
+    
 }
