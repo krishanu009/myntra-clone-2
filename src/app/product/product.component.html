@@ -32,7 +32,7 @@
                 <p style="font-size: 14px;">Home / clothing / <strong>{{ProductTitle}}</strong></p>
                 <div style="display: inline-block;font-size: 14px;"><strong >{{ProductTitle}}</strong></div> - <div style="display: inline-block;color: rgb(151, 145, 145);font-size: 14px;">{{productCount}} items</div>
                 
-                <div style="margin-top: 30px;"><Strong>FILTERS</Strong></div>
+                <div class="filter-text" style="margin-top: 30px;"><Strong>FILTERS</Strong></div>
             </div>
             
         </div>
@@ -40,7 +40,7 @@
     </div>
    
     <div class="row">
-        <div class="col-2">
+        <div class="col-2 filter-panel">
             <!-- <div class="filter2">
                 <app-filters [filterConfig]="genderFilterConfig" [filterCat]="genders" (filterValueEmmiter)="filterValuesEmitted($event)"></app-filters>
                 
@@ -70,8 +70,8 @@
             </div>
 
           </div>
-          <div class="col-10">
-            <div class="row" style="margin-bottom: 15px;">
+          <div class="col-md-12 col-lg-10">
+            <div class="row chip-panel" style="margin-bottom: 15px;">
                 <app-chips [values]="selectedValues" (chipEmitter)="chipCloseEmitted($event)"></app-chips>
             </div>
             <div class="row" >

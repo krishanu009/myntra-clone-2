@@ -40,7 +40,7 @@
 	[pauseOnFocus]="false" *ngIf="images">
         <ng-template *ngFor="let img of images" ngbSlide>
             <div class="picsum-img-wrapper">
-                <img [src]="img" alt="Random first slide" />
+                <img class="slider-img" [src]="img" alt="Random first slide" />
             </div>
             <!-- <div class="carousel-caption">
                 <h3>First slide label</h3>

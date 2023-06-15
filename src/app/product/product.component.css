@@ -193,3 +193,27 @@
     font-size: 30px;
     color: #544957;
 }
+@media (max-width: 600px) {
+
+    /* .top-panel{
+        display: none;
+    } */
+
+    .filter-panel
+    {
+        display:none;
+    }
+    .chip-panel
+    {
+        display:none;
+    }
+    .filter-text
+    {
+        display: none;
+    }
+    .product-view
+{
+    width: 50%;
+    /* display: inline; */
+}
+}
