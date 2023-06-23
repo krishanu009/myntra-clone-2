@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.7.
 
+
+https://github.com/krishanu009/myntra-clone-2/assets/107165160/601a0fc4-a8a1-42ca-9bb9-78780a9289e5
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
