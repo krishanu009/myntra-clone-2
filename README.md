@@ -1,8 +1,8 @@
-# MyntraClone2
+# MyntraClone 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.7.
 
-
+Live Link https://krishanu009.github.io/myntra-clone-2/
 https://github.com/krishanu009/myntra-clone-2/assets/107165160/601a0fc4-a8a1-42ca-9bb9-78780a9289e5
 
 
