@@ -1,8 +1,5 @@
 # MyntraClone 
 
-
-https://github.com/krishanu009/myntra-clone-2/assets/107165160/0107dbc9-28ab-4372-9756-83f31f17eb4c
-
 https://github.com/krishanu009/myntra-clone-2/assets/107165160/601a0fc4-a8a1-42ca-9bb9-78780a9289e5
 
 Live Link https://krishanu009.github.io/myntra-clone-2/
